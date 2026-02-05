@@ -13,8 +13,8 @@ body {
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  padding: 20px;
 }
-
 
 /* =========================
    TÍTULOS Y TEXTO
@@ -28,41 +28,82 @@ p {
   margin-bottom: 10px;
 }
 
-
 /* =========================
-   ENLACES
+   CONTENEDORES
 ========================= */
 
-a {
-  color: #8b0000;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================
-   CONTENEDORES / SECCIONES
-========================= */
-
-section {
+div {
   background-color: #ffffff;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 8px;
 }
 
+/* =========================
+   ENLACES (index raíz)
+========================= */
+
+a {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #8b0000;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+a:hover {
+  background-color: #8b0000;
+  color: white;
+  text-decoration: none;
+}
 
 /* =========================
-   FORMULARIOS (básico)
+   TABLAS (cliente + admin)
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #8b0000;
+  color: white;
+}
+
+/* =========================
+   IMÁGENES DEL MENÚ
+========================= */
+
+.menu-img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* =========================
+   FORMULARIOS (mesero)
 ========================= */
 
 form {
+  display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 10px;
 }
 
 label {
@@ -72,28 +113,31 @@ label {
 input, select, button {
   padding: 8px;
   font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-button {
+button,
+input[type="submit"] {
   background-color: #8b0000;
   color: white;
   border: none;
   cursor: pointer;
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   opacity: 0.9;
 }
-
 
 /* =========================
    VISTAS POR TIPO DE USUARIO
 ========================= */
 
-body.cliente {}
-body.administrador {}
-body.cocina {}
-body.mesero {}
+/*body.cliente { /* estilos específicos cliente */ 
+/*body.administrador { /* estilos específicos admin */ 
+/*body.cocina { /* estilos específicos cocina */ 
+/*body.mesero { /* estilos específicos mesero */ 
 
 
 /* =========================
@@ -101,8 +145,21 @@ body.mesero {}
 ========================= */
 
 @media (max-width: 768px) {
-  section {
-    margin: 10px;
+  body {
+    padding: 12px;
+  }
+
+  div {
     padding: 15px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .menu-img {
+    width: 70px;
+    height: 55px;
   }
 }
