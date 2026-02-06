@@ -197,12 +197,18 @@ input[type="submit"]:hover {
    IMAGEN PRINCIPAL
   ========================= */
 
+  .contenedor-img {
+    text-align: center;
+    background-color: transparent;
+  }
+
   .img-principal {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
     height: auto;
     border-radius: 12px;
   }
+
 
 }
