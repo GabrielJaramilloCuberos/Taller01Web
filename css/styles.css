@@ -192,4 +192,17 @@ input[type="submit"]:hover {
     background-color: #a30000;
     transform: translateX(-3px);
   }
+
+  /* =========================
+   IMAGEN PRINCIPAL
+  ========================= */
+
+  .img-principal {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
 }
