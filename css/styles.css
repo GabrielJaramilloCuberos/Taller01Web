@@ -1,22 +1,28 @@
+/* Reset general y configuración base */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
   margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+               'Open Sans', 'Helvetica Neue', sans-serif; /* Fuente general */
 }
 
+/* Estilos generales del body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: burlywood;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
+  font-family: Arial, sans-serif; /* Fuente principal */
+  background-color: burlywood; /* Color de fondo */
+  color: #333; /* Color del texto */
+  line-height: 1.6; /* Altura de línea */
+  text-align: center; /* Alineación del texto */
 }
 
+/* Márgenes para títulos */
 h1, h2, h3 {
   margin-bottom: 10px;
 }
 
+/* Título principal de bienvenida */
 .bienvenida{
   margin: 10px;
   color: #4a1414;
@@ -24,21 +30,24 @@ h1, h2, h3 {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #8b0000, #f2b705);
+  background: linear-gradient(45deg, #8b0000, #f2b705); /* Degradado */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Párrafos */
 p {
   margin-bottom: 10px;
 }
 
+/* Estilos base para contenedores */
 div {
   margin: 10px 0;
   border-radius: 8px;
 }
 
+/* Estilos generales para enlaces */
 a {
   display: inline-block;
   padding: 10px 14px;
@@ -49,7 +58,7 @@ a {
   margin: 10px;
 }
 
-
+/* Barra de navegación */
 nav {
   display: flex;
   background-color: #4a1414;
@@ -57,6 +66,7 @@ nav {
   text-align: right;
 }
 
+/* Ítems del menú de navegación */
 .navItem{
   color: white;
   font-weight: bold;
@@ -66,11 +76,13 @@ nav {
   transition: 0.5s;
 }
 
+/* Efecto hover en navegación */
 .navItem:hover {
   background-color: #2d5934;
   color: #f2b705;
 }
 
+/* Botón volver */
 .btn-volver {
   background-color: #8b0000;
   color: white;
@@ -81,11 +93,13 @@ nav {
   transition: 0.5s;
 }
 
+/* Hover del botón volver */
 .btn-volver:hover {
   background-color: #2d5934;
   color: #f2b705;
 }
 
+/* Estilos generales de tablas */
 table {
   width: 90%;
   border-collapse: collapse;
@@ -94,6 +108,7 @@ table {
   overflow: hidden;
 }
 
+/* Celdas de tablas */
 th, td {
   border: 1px solid #ddd;
   padding: 15px;
@@ -101,6 +116,7 @@ th, td {
   vertical-align: middle;
 }
 
+/* Encabezados de tabla */
 th {
   background-color: #4a1414;
   color: white;
@@ -110,16 +126,19 @@ th {
   font-size: 0.95rem;
 }
 
+/* Filas pares */
 tbody tr:nth-child(even) {
   background-color: #f9f3f0;
 }
 
+/* Última fila de la tabla */
 tbody tr:last-child {
   background-color: #f2b705;
   font-weight: bold;
   color: #4a1414;
 }
 
+/* Secciones principales */
 .seccion-menu,
 .seccion-formulario {
   max-width: 1000px;
@@ -129,6 +148,7 @@ tbody tr:last-child {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Títulos de secciones */
 .seccion-menu h2,
 .seccion-formulario h2 {
   color: #4a1414;
@@ -137,6 +157,7 @@ tbody tr:last-child {
   padding-bottom: 10px;
 }
 
+/* Formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -144,6 +165,7 @@ form {
   margin-top: 15px;
 }
 
+/* Agrupación de campos */
 fieldset {
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -151,6 +173,7 @@ fieldset {
   margin-bottom: 15px;
 }
 
+/* Título del fieldset */
 legend {
   padding: 0 10px;
   font-weight: bold;
@@ -158,6 +181,7 @@ legend {
   font-size: 1.1rem;
 }
 
+/* Grupo de campos */
 .form-group {
   display: flex;
   align-items: center;
@@ -165,6 +189,7 @@ legend {
   margin-bottom: 12px;
 }
 
+/* Etiquetas */
 .form-group label {
   font-weight: bold;
   color: #333;
@@ -172,6 +197,7 @@ legend {
   flex-shrink: 0;
 }
 
+/* Checkboxes */
 .form-group input[type="checkbox"] {
   width: 20px;
   height: 20px;
@@ -179,11 +205,13 @@ legend {
   flex-shrink: 0;
 }
 
+/* Texto al lado del checkbox */
 .form-group input[type="checkbox"] + label {
   flex: 1;
   min-width: auto;
 }
 
+/* Inputs y selects */
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group select {
@@ -194,13 +222,14 @@ legend {
   flex: 1;
 }
 
-
+/* Etiqueta de cantidad */
 .form-group label:nth-last-child(2) {
   margin-left: auto;
   flex-shrink: 0;
   min-width: auto;
 }
 
+/* Total del pedido */
 .total-pedido {
   background-color: #f2b705;
   color: #4a1414;
@@ -210,10 +239,12 @@ legend {
   font-size: 1.2rem;
 }
 
+/* Título del total */
 .total-pedido h3 {
   margin: 0;
 }
 
+/* Botón enviar */
 .btn-enviar {
   background-color: #8b0000;
   color: white;
@@ -230,11 +261,13 @@ legend {
   letter-spacing: 1px;
 }
 
+/* Hover botón enviar */
 .btn-enviar:hover {
   background-color: #a30000;
   opacity: 0.9;
 }
 
+/* Imágenes del menú */
 .menu-img {
   width: 90px;
   height: 70px;
@@ -243,13 +276,14 @@ legend {
   display: block;
 }
 
+/* Imagen principal */
 .img-principal {
   width: 40%;
   height: auto;
   border-radius: 12px;
 }
 
-/* Esto cambia las reglas segun el tamaño del dispositivo mirar despues :) */
+/* Esto cambia las reglas según el tamaño del dispositivo */
 @media (max-width: 768px) {
   body {
     padding: 12px;
@@ -268,7 +302,7 @@ legend {
     width: 70px;
     height: 55px;
   }
-  
+
   /* Pantallas grandes */
   @media (min-width: 1200px) {
     body {
@@ -277,20 +311,15 @@ legend {
     }
   }
 
-  /* =========================
-   BOTÓN VOLVER FIJO
-  ========================= */
-
+  /* Botón volver fijo */
   .btn-volver {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
-
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
   }
@@ -301,7 +330,7 @@ legend {
     transform: translateX(-3px);
   }
 
-
+  /* Contenedor de imagen principal */
   .contenedor-img {
     text-align: center;
     background-color: burlywood;

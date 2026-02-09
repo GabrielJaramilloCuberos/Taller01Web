@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores de colombia - Mesero</title>
+    <!-- Conectar con los estilos css -->
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
 <body>
+     <!-- Barra de navegación y botón volver -->
     <nav>
         <a href="../../index.html" class="btn-volver">← Volver al menú principal</a>
         <a href="../../views/cliente/index.html" class="navItem">Cliente</a>
@@ -16,22 +18,24 @@
         <a href="../../views/mesero/index.html" class="navItem">Mesero</a>
         <a href="../../views/administrador/index.html" class="navItem">Administrador</a>
     </nav>
-    
+     <!-- Título principal -->
     <h1 class="bienvenida">Gestión de Pedidos</h1>
     
+    <!-- Formulario para realizar pedidos -->
     <div class="seccion-formulario">
         <h2>Realizar Pedido</h2>
+         <!-- Datos del pedido -->
         <form action="">
             <fieldset>
                 <legend>Selecciona platos y cantidades</legend>
-                
+                  <!-- Opciones de platos -->
                 <div class="form-group">
                     <input type="checkbox" id="plato1" name="plato1" value="toston">
                     <label for="plato1">Toston con hogao</label>
                     <label for="cant1">Cantidad:</label>
                     <input type="number" id="cant1" name="cant1" min="1" max="10" value="1">
                 </div>
-
+                  <!-- Cada "bloque" representa un plato -->
                 <div class="form-group">
                     <input type="checkbox" id="plato2" name="plato2" value="arepa">
                     <label for="plato2">Arepa de chocolo</label>
@@ -60,17 +64,19 @@
                     <input type="number" id="cant5" name="cant5" min="1" max="10" value="1">
                 </div>
             </fieldset>
-            
+            <!-- Total del pedido -->
             <div class="total-pedido">
                 <h3>Total: <strong>$500,000 COP</strong></h3>
             </div>
             
+            <!-- Enviar pedido -->
             <button type="submit" class="btn-enviar">Enviar Pedido</button>
         </form>
     </div>
-
+      <!-- Sección para realizar reservas -->
     <div class="seccion-formulario">
         <h2>Reservar Mesa</h2>
+        <!-- Formulario visual para reservas -->
         <form action="">
             <fieldset>
                 <legend>Datos de la reserva</legend>
@@ -95,7 +101,7 @@
                     </select>
                 </div>
             </fieldset>
-            
+              <!-- Botón para confirmar la reserva -->
             <button type="submit" class="btn-enviar">Confirmar Reserva</button>
         </form>
     </div>
